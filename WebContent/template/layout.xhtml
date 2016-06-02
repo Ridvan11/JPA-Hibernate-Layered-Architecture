@@ -1,0 +1,110 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<title>Shop Homepage - Start Bootstrap Template</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="resource/css/bootstrap.min.css" rel="stylesheet" />
+
+	<!-- Custom CSS -->
+	<link href="resource/css/shop-homepage.css" rel="stylesheet" />
+</h:head>
+<h:body>
+	<div id="page">
+		<div id="header-container">
+			<div id="header">
+				<ui:insert name="header">
+				
+				  <!-- Navigation -->
+				    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+				        <div class="container">
+				            <!-- Brand and toggle get grouped for better mobile display -->
+				            <div class="navbar-header">
+				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				                    <span class="sr-only">Toggle navigation</span>
+				                    <span class="icon-bar"></span>
+				                    <span class="icon-bar"></span>
+				                    <span class="icon-bar"></span>
+				                </button>
+				                <a class="navbar-brand" href="#">Start Bootstrap</a>
+				            </div>
+				            <!-- Collect the nav links, forms, and other content for toggling -->
+				            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				                <ul class="nav navbar-nav">
+				                    <li>
+				                        <a href="#">About</a>
+				                    </li>
+				                    <li>
+				                        <a href="#">Services</a>
+				                    </li>
+				                    <li>
+				                        <a href="#">Contact</a>
+				                    </li>
+				                </ul>
+				            </div>
+				            <!-- /.navbar-collapse -->
+				        </div>
+				        <!-- /.container -->
+				    </nav>
+						 <!-- Nav Bitti -->			
+				</ui:insert>
+			</div>
+		</div>
+		
+		
+
+		<!--<div id="content-container">-->	
+			<ui:insert name="content">
+
+			</ui:insert>
+
+			<div id="sidebar">
+				<ui:insert name="rightnav">
+					<!-- Page Content -->
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<p class="lead">Shop Name</p>
+								<div class="list-group">
+									<a href="#" class="list-group-item">Category 1</a> <a href="#"
+										class="list-group-item">Category 2</a> <a href="#"
+										class="list-group-item">Category 3</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ui:insert>
+			</div>
+		</div>
+
+
+		<div id="footer-container">
+			<div id="footer">
+				<ui:insert name="footer">
+					   <!-- Footer -->
+					   <div class="container">
+				        <footer>
+				            <div class="row">
+				                <div class="col-lg-12">
+				                    <p>Copyright Your Website 2014</p>
+				                </div>
+				            </div>
+				        </footer>
+				        </div>
+				</ui:insert>
+			</div>
+		</div>
+	<!--  </div>-->	
+	
+
+	<!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="resource/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="resource/js/bootstrap.min.js"></script>
+</h:body>
+</html>

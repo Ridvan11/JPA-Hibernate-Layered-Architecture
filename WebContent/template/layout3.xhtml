@@ -1,0 +1,198 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Shop Homepage - Start Bootstrap Template</title>
+ 
+	<!-- Bootstrap Core CSS -->
+	<link href="template/resource/css/bootstrap.min.css" rel="stylesheet" />
+	
+	<f:facet name="middle">
+            <h:outputStylesheet name="bootstrap/css/bootstrap.css" />
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
+            
+            <h:outputScript name="bootstrap/js/bootstrap.js" />
+        </f:facet>
+        
+        <f:facet name="last">
+            <h:outputStylesheet name="css/shop-homepage.css" />
+            
+           
+        </f:facet>
+
+	<!-- Custom CSS -->
+	<link href="resource/css/shop-homepage.css" rel="stylesheet" />
+</h:head>
+<h:body>
+	<h:form id="form">
+	 <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            	<p:megaMenu 
+		style="margin-top:20px">
+		<p:submenu label="Dizustu Bilgisayarlar" icon="ui-icon-check">
+			<p:column>
+				<p:submenu label="Notebook">
+					<p:menuitem value="Oyun Bilgisayarlari" url="forms.xhtml" />
+					<p:menuitem value="Is Bilgisayarlari" url="#" />
+				</p:submenu>
+				<p:submenu label="Macbook">
+					<p:menuitem value="TV.2.1" url="#" />
+					<p:menuitem value="TV.2.2" url="#" />
+				</p:submenu>
+			</p:column>
+
+		</p:submenu>
+
+		<p:submenu label="Masaustu Bilgisayarlar" icon="ui-icon-document">
+
+			<p:column>
+
+				<p:submenu label="All-in-One Masaustu">
+					<p:menuitem value="Oyun Bilgisayari" url="#" />
+					<p:menuitem value="Full Masaustu" url="#" />
+				</p:submenu>
+				<p:submenu label="Mini Masaustu">
+					<p:menuitem value="Sports.2.1" url="#" />
+					<p:menuitem value="Sports.2.2" url="#" />
+					<p:menuitem value="Sports.2.3" url="#" />
+				</p:submenu>
+			</p:column>
+			<p:column>
+				<p:submenu label="Sports.5">
+					<p:menuitem value="Sports.5.1" url="#" />
+					<p:menuitem value="Sports.5.2" url="#" />
+					<p:menuitem value="Sports.5.3" url="#" />
+				</p:submenu>
+			</p:column>
+
+		</p:submenu>
+
+		<p:submenu label="Bilgisayar Bilesenleri" icon="ui-icon-pencil">
+			<p:column>
+
+				<p:submenu label="Kart Bilesenleri">
+					<p:menuitem value="Anakart" url="#" />
+					<p:menuitem value="Ekran Kartlari" url="#" />
+				</p:submenu>
+
+				<p:submenu label="Bilesenler 2">
+					<p:menuitem value="Bellek (RAM)" url="#" />
+					<p:menuitem value="Islemciler" url="#" />
+					<p:menuitem value="Kasa" url="employee.xhtml" />
+				</p:submenu>
+			</p:column>
+
+			<p:column>
+				<p:submenu label="Entertainment.4" icon="ui-icon-help">
+					<p:menuitem value="Entertainment.4.1" url="#" />
+					<p:menuitem value="Entertainment.4.2" url="#" />
+				</p:submenu>
+			</p:column>
+		</p:submenu>
+
+		<p:submenu label="Teknik Servis" icon="ui-icon-contact">
+			<p:column>
+				<p:submenu label="Destek ve Sorun Giderme">
+					<p:menuitem value="Garanti" url="#" />
+					<p:menuitem value="Ucretli" url="#" />
+				</p:submenu>
+				<p:submenu label="Teknik">
+					<p:menuitem value="Yedek Parca" url="#" />
+					<p:menuitem value="Uzak Baglanti" url="#" />
+					<p:menuitem value="Format" url="#" />
+				</p:submenu>
+			</p:column>
+
+			<p:column>
+				<p:submenu label="Tech.4">
+					<p:menuitem value="Tech.4.1" url="#" />
+					<p:menuitem value="Tech.4.2" url="#" />
+				</p:submenu>
+			</p:column>
+		</p:submenu>
+
+
+		<f:facet name="options">
+			<!--  <p:inputText style="margin-right:10px" placeholder="Search" />-->
+			<h:outputLink value="forms.xhtml">
+				<p:commandButton type="button" value="Giris Yap" icon="ui-icon-extlink" /> 
+			</h:outputLink>
+			
+			<h:outputLink value="kayitol.xhtml">
+			<p:commandButton type="button" value="Kayit ol" icon="ui-icon-extlink" />
+			</h:outputLink>
+		</f:facet>
+	</p:megaMenu>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">		
+            
+            <p:column>
+				<!--  <p:graphicImage name="WebContent/resources/"/>-->
+				<h:outputLink value="homepage.xhtml">
+					<h:graphicImage value="/resources/img/teknik-servis.jpg" width="270"
+					height="100" />
+				</h:outputLink>
+			</p:column>
+            
+                <p class="lead">OHBE SOFT</p>
+                <div class="list-group">
+                    <a href="admin.xhtml" class="list-group-item">Category 1</a>
+                    <a href="#" class="list-group-item">Category 2</a>
+                    <a href="#" class="list-group-item">Category 3</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+	               	<ui:insert name="content"> <!--   **********Burası ana dynamic**** -->
+	
+					</ui:insert>
+                    </div>
+                </div>              
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr/>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="resource/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="resource/js/bootstrap.min.js"></script>
+    </h:form>
+</h:body>
+</html>

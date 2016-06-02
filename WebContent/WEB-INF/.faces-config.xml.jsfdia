@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#template#admin.xhtml"
+  PATH="/template/admin.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#template#admin.xhtml:0" NAME="item"
+   PATH="/template/admin.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#template#panel.xhtml"
+    NAME="output" PATH="/template/panel.xhtml"
+    TARGET="rules:#template#panel.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="ridvan::#ridvan.xhtml" NAME="output1"
+    PATH="/ridvan.xhtml" TARGET="rules:#ridvan.xhtml" TITLE="ridvan" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="failure::#template#relogin.xhtml"
+    NAME="output2" PATH="/template/relogin.xhtml"
+    TARGET="rules:#template#relogin.xhtml" TITLE="failure" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="locked::#template#locked.xhtml"
+    NAME="output3" PATH="/template/locked.xhtml"
+    TARGET="rules:#template#locked.xhtml" TITLE="locked" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#template#panel.xhtml"
+  PATH="/template/panel.xhtml" SHAPE="272,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#template#locked.xhtml"
+  PATH="/template/locked.xhtml" SHAPE="272,321,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#template#relogin.xhtml"
+  PATH="/template/relogin.xhtml" SHAPE="272,209,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#template#forms.xhtml"
+  PATH="/template/forms.xhtml" SHAPE="32,193,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#template#forms.xhtml:0" NAME="item"
+   PATH="/template/forms.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#template#admin.xhtml"
+    NAME="output" PATH="/template/admin.xhtml"
+    TARGET="rules:#template#admin.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="failure::#template#forms.xhtml"
+    NAME="output1" PATH="/template/forms.xhtml"
+    TARGET="rules:#template#forms.xhtml" TITLE="failure" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ridvan.xhtml" PATH="/ridvan.xhtml"
+  SHAPE="288,497,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<h:outputStylesheet library="css" name="table-style.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>JSF &amp; JPA</title>
+</h:head>
+<h:body>
+
+	<h:form id="form">
+
+		<p:column>
+			<!--  <p:graphicImage name="WebContent/resources/"/>-->
+			<h:graphicImage value="/resources/img/teknik-servis.jpg" width="400"
+				height="100" />
+		</p:column>
+
+
+
+	</h:form>
+
+	<p:megaMenu orientation="#{megaMenuView.orientation}"
+		style="margin-top:20px">
+		<p:submenu label="Dizustu Bilgisayarlar" icon="ui-icon-check">
+			<p:column>
+				<p:submenu label="Notebook">
+					<p:menuitem value="Oyun Bilgisayarlari" url="forms.xhtml" />
+					<p:menuitem value="Is Bilgisayarlari" url="#" />
+				</p:submenu>
+				<p:submenu label="Macbook">
+					<p:menuitem value="TV.2.1" url="#" />
+					<p:menuitem value="TV.2.2" url="#" />
+				</p:submenu>
+			</p:column>
+
+		</p:submenu>
+
+		<p:submenu label="Masaustu Bilgisayarlar" icon="ui-icon-document">
+
+			<p:column>
+
+				<p:submenu label="All-in-One Masaustu">
+					<p:menuitem value="Oyun Bilgisayari" url="#" />
+					<p:menuitem value="Full Masaustu" url="#" />
+				</p:submenu>
+				<p:submenu label="Mini Masaustu">
+					<p:menuitem value="Sports.2.1" url="#" />
+					<p:menuitem value="Sports.2.2" url="#" />
+					<p:menuitem value="Sports.2.3" url="#" />
+				</p:submenu>
+			</p:column>
+			<p:column>
+				<p:submenu label="Sports.5">
+					<p:menuitem value="Sports.5.1" url="#" />
+					<p:menuitem value="Sports.5.2" url="#" />
+					<p:menuitem value="Sports.5.3" url="#" />
+				</p:submenu>
+			</p:column>
+
+		</p:submenu>
+
+		<p:submenu label="Bilgisayar Bilesenleri" icon="ui-icon-pencil">
+			<p:column>
+
+				<p:submenu label="Kart Bilesenleri">
+					<p:menuitem value="Anakart" url="#" />
+					<p:menuitem value="Ekran Kartlari" url="#" />
+				</p:submenu>
+
+				<p:submenu label="Bilesenler 2">
+					<p:menuitem value="Bellek (RAM)" url="#" />
+					<p:menuitem value="Islemciler" url="#" />
+					<p:menuitem value="Kasa" url="employee.xhtml" />
+				</p:submenu>
+			</p:column>
+
+			<p:column>
+				<p:submenu label="Entertainment.4" icon="ui-icon-help">
+					<p:menuitem value="Entertainment.4.1" url="#" />
+					<p:menuitem value="Entertainment.4.2" url="#" />
+				</p:submenu>
+			</p:column>
+		</p:submenu>
+
+		<p:submenu label="Teknik Servis" icon="ui-icon-contact">
+			<p:column>
+				<p:submenu label="Destek ve Sorun Giderme">
+					<p:menuitem value="Garanti" url="#" />
+					<p:menuitem value="Ucretli" url="#" />
+				</p:submenu>
+				<p:submenu label="Teknik">
+					<p:menuitem value="Yedek Parca" url="#" />
+					<p:menuitem value="Uzak Baglanti" url="#" />
+					<p:menuitem value="Format" url="#" />
+				</p:submenu>
+			</p:column>
+
+			<p:column>
+				<p:submenu label="Tech.4">
+					<p:menuitem value="Tech.4.1" url="#" />
+					<p:menuitem value="Tech.4.2" url="#" />
+				</p:submenu>
+			</p:column>
+		</p:submenu>
+
+
+		<f:facet name="options">
+			<!--  <p:inputText style="margin-right:10px" placeholder="Search" />-->
+			<h:outputLink value="forms.xhtml">
+			<p:commandButton type="button" value="Giris Yap" icon="ui-icon-extlink" /> 
+			</h:outputLink>
+			
+			<p:commandButton type="button" value="Kayit ol" icon="ui-icon-extlink" />
+		</f:facet>
+	</p:megaMenu>
+
+
+
+</h:body>
+</html>

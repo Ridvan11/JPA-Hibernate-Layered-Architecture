@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14622683361320" configfile="/JPAJSF2016Week4/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="02.dynamic.navigator/login.xhtml" id="pf14628079858410" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14630603923025 pf14630603923026 pf146306075037410" path="/template/admin.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="template/relogin.xhtml" id="pf14630603923028" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14630603923025" path="/template/relogin.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="template/locked.xhtml" id="pf14630603923029" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf14630603923026" path="/template/locked.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="template/panel.xhtml" id="pf146306075037411" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf146306075037410" path="/template/panel.xhtml"/>
+  <links id="pf14630603923025" target="pf14630603923028" source="pf14628079858410" outcome="failure"/>
+  <links id="pf14630603923026" target="pf14630603923029" source="pf14628079858410" outcome="locked"/>
+  <links id="pf146306075037410" target="pf146306075037411" source="pf14628079858410" outcome="success"/>
+</pageflow:Pageflow>

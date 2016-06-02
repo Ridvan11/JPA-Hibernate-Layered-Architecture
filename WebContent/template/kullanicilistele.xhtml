@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>JSF &amp; JPA</title>
+</h:head>
+<h:body>
+	<ui:composition template="layout3.xhtml">
+		<ui:define name="content">
+	
+<!-- 		<h:form id="form"> -->
+		<!-- primafaces -->
+		<h2>Kullanici Listesi</h2>
+
+			<p:dataTable id="tbl" var="myUser" value="#{userController.userList}"
+				paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
+				paginator="true" rows="10" style="margin-bottom:20px">
+
+				<f:facet name="{Exporters}">
+					<h:commandLink>
+						<p:graphicImage name="/resource/images/excel.png" width="24" />
+						<p:dataExporter type="xls" target="tbl" fileName="userList" />
+					</h:commandLink>
+
+					<h:commandLink>
+						<p:graphicImage name="/resource/images/pdf.png" width="24" />
+						<p:dataExporter type="pdf" target="tbl" fileName="userList" />
+					</h:commandLink>
+
+<!-- 					<h:commandLink> -->
+<!-- 						<p:graphicImage name="/resource/images/csv.png" width="24" /> -->
+<!-- 						<p:dataExporter type="csv" target="tbl" fileName="cars" /> -->
+<!-- 					</h:commandLink> -->
+
+<!-- 					<h:commandLink> -->
+<!-- 						<p:graphicImage name="/resource/images/xml.png" width="24" /> -->
+<!-- 						<p:dataExporter type="xml" target="tbl" fileName="cars" /> -->
+<!-- 					</h:commandLink> -->
+				</f:facet>
+				
+				
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="id" />
+					</f:facet>
+					<h:outputText value="#{myUser.userid}" />
+				</p:column>
+
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="name" />
+					</f:facet>
+					<h:outputText value="#{myUser.username}" />
+				</p:column>
+
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="surname" />
+					</f:facet>
+					<h:outputText value="#{myUser.usersurname}" />
+				</p:column>
+
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="Email" />
+					</f:facet>
+					<h:outputText value="#{myUser.useremail}" />
+				</p:column>
+
+				<p:column>
+					<f:facet name="header">
+						<h:outputText value="Sifre" />
+					</f:facet>
+					<h:outputText value="#{myUser.userpassword}" />
+				</p:column>
+			</p:dataTable>
+			
+			 <h3>Raporu Kaydet</h3>
+			<h:commandLink>
+				<p:graphicImage value="/resources/img/excel.png" />
+				<p:dataExporter type="xls" target="tbl" fileName="userList"
+					pageOnly="true" />
+			</h:commandLink>
+
+			<h:commandLink>
+				<p:graphicImage value="/resources/img/pdf.png" />
+				<p:dataExporter type="pdf" target="tbl" fileName="userList"
+					pageOnly="true" />
+			</h:commandLink>
+
+			<p>
+				<h:commandButton value="Listele"
+					action="#{userController.listeleUser}" />
+			</p>
+			
+		</ui:define>
+	</ui:composition>
+
+</h:body>
+</html>
